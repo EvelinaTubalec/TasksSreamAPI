@@ -32,7 +32,7 @@ public class TaskDto {
 
     public static void converting(List<Task> tasks){
         tasks.stream().
-                map(s -> new TaskDto(s)).
+                map(TaskDto::new).
                 forEach(System.out::println);
     }
 }
