@@ -3,6 +3,7 @@ import task1.Subject;
 import task2.Task;
 import task2.TaskType;
 import task3.TaskDto;
+import task4.Task4;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -57,5 +58,12 @@ public class Main {
 
         //task 3
         TaskDto.converting(tasks);
+
+        //task 4
+        String a = "aaabbxxxxxtx";
+        String b = "p1p1p1p";
+
+        Task4.getResult(a);
+        Task4.getResult(b);
     }
 }
