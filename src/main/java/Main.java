@@ -1,3 +1,5 @@
+import Task5.Person;
+import Task5.Skill;
 import task1.Student;
 import task1.Subject;
 import task2.Task;
@@ -7,6 +9,7 @@ import task4.Task4;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -65,5 +68,15 @@ public class Main {
 
         Task4.getResult(a);
         Task4.getResult(b);
+
+        //task 5
+        List<Person> persons = new ArrayList<>();
+        persons.add(new Person(1L, "Lokesh", new Skill("English", 10), new Skill("Kannada", 20), new Skill("Hindi", 10)));
+        persons.add(new Person(2L, "Mahesh", new Skill("English", 10), new Skill("Kannada", 30), new Skill("Hindi", 50)));
+        persons.add(new Person(3L, "Ganesh", new Skill("English", 10), new Skill("Kannada", 20), new Skill("Hindi", 40)));
+        persons.add(new Person(4L, "Ramesh", new Skill("English", 10), new Skill("Kannada", 20), new Skill("Hindi", 40)));
+        persons.add(new Person(5L, "Suresh", new Skill("English", 10), new Skill("Kannada", 40), new Skill("Hindi", 40)));
+        persons.add(new Person(6L, "Gnanesh", new Skill("English", 100), new Skill("Kannada", 20), new Skill("Hindi", 40)));
+        Person.findBestMatchingPerson(persons, new Skill("English", 50), new Skill("Kannada", 50), new Skill(" Urdu", 50), new Skill("Hindi", 50));
     }
 }
