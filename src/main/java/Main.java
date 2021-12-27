@@ -2,6 +2,7 @@ import task1.Student;
 import task1.Subject;
 import task2.Task;
 import task2.TaskType;
+import task3.TaskDto;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -53,5 +54,8 @@ public class Main {
 
         List<Task> tasks = Stream.of(task1, task2, task3, task4, task5).collect(Collectors.toList());
         Task.collect(tasks);
+
+        //task 3
+        TaskDto.converting(tasks);
     }
 }
