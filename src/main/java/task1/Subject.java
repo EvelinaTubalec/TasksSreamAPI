@@ -12,8 +12,10 @@ public class Subject {
     private String subjectName;
 
     public static void currentSubjectRating(List<Student> studentList, Subject subject){
-        System.out.println(studentList.stream().
-                mapToInt(s -> s.getRating().get(subject)).
+        System.out.println
+        (studentList.stream().
+                mapToInt(s ->
+        s.getRating().get(subject)).
                 average().
                 orElse(0));
     }

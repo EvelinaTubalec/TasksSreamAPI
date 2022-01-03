@@ -30,7 +30,7 @@ public class TaskDto {
         setTags(task.getTags());
     }
 
-    public static void converting(List<Task> tasks){
+    public static void convert(List<Task> tasks){
         tasks.stream().
                 map(TaskDto::new).
                 forEach(System.out::println);

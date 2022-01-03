@@ -9,9 +9,7 @@ import task4.Task4;
 
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -43,7 +41,7 @@ public class Main {
         ratingOfOleg.put(informatics, 9);
 
         //List of all students
-        List<Student> studentList = Stream.of(student, student1, student2).collect(Collectors.toList());
+        List<Student> studentList = List.of(student, student1, student2);
 
         Subject.currentSubjectRating(studentList, math);
         Subject.currentSubjectRating(studentList, english);
@@ -78,7 +76,5 @@ public class Main {
         persons.add(new Person(5L, "Suresh", new Skill("English", 10), new Skill("Kannada", 40), new Skill("Hindi", 40)));
         persons.add(new Person(6L, "Gnanesh", new Skill("English", 100), new Skill("Kannada", 20), new Skill("Hindi", 40)));
         Person.findBestMatchingPerson(persons, new Skill("English", 50), new Skill("Kannada", 50), new Skill(" Urdu", 50), new Skill("Hindi", 50));
-
-
     }
 }
